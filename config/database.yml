@@ -24,10 +24,8 @@ default: &default
 development:
   <<: *default
   database: sead_api_development
-  username: postgres
-  password: 0-0-0-3Mb
-  #username: <%= ENV['ADMIN_DB'] %>
-  #password: <%= ENV['ADMIN_PASSWORD'] %>
+  username: <%= ENV['ADMIN_DB'] %>
+  password: <%= ENV['ADMIN_PASSWORD'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,10 +60,8 @@ development:
 test:
   <<: *default
   database: sead_api_test
-  username: postgres
-  password: 0-0-0-3Mb
-  #username: <%= ENV['ADMIN_DB'] %>
-  #password: <%= ENV['ADMIN_PASSWORD'] %>
+  username: <%= ENV['ADMIN_DB'] %>
+  password: <%= ENV['ADMIN_PASSWORD'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
