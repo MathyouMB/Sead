@@ -28,5 +28,13 @@ module Types
       Note.all
     end
 
+    field :note, Types::NoteType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def note(id:)
+      Note.find(id)
+    end
+
   end
 end
