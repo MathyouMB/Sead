@@ -14,6 +14,15 @@ module Types
       User.find(id)
     end
 
+    field :login, Types::UserType, null: false do
+      argument :email, String, required: true
+      argument :password, String, required: true
+    end
+
+    def login(email:, password:)
+      User.find_by(email: email)
+    end
+
     field :notes, [Types::NoteType], null: false
     def notes
       Note.all

@@ -8,7 +8,8 @@
 
 User.create(
     username: "Admin",
-    email: "admin@email.com"
+    email: "admin@email.com",
+    password: "123"
 )
 
 5.times do 
