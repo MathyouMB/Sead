@@ -21,15 +21,15 @@ module Types
 
     def login(email:, password:)
       user = User.find_by(email: email)
-      #if user.nil?
+      if user.nil?
+          return nil 
           #raise GraphQL::ExecutionError, "User does not exist"
-      #end
+      elsif (user.password != password)
+          return nil 
+          #raise GraphQL::ExecutionError, "Incorrect password"
+      end
 
-      #if (user.password != password)
-         #raise GraphQL::ExecutionError, "Incorrect password"
-      #end
-
-      user
+      return(user)
 
     end
 
