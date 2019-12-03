@@ -12,6 +12,18 @@ User.create(
     password: "123"
 )
 
+User.create(
+    username: "Tiffany",
+    email: "tiffany@email.com",
+    password: "123"
+)
+
+User.create(
+    username: "Matthew",
+    email: "Matthew@email.com",
+    password: "123"
+)
+
 5.times do 
     Note.create(
         title: Faker::Marketing.buzzwords,
