@@ -18,7 +18,7 @@ module Mutations
           text: text,
           user_id: user_id,
         )
-        raise GraphQL::ExecutionError, board.errors.full_messages.join(", ") unless board.errors.empty?
+        raise GraphQL::ExecutionError, board.errors.full_messages.join(", ") unless note.errors.empty?
         
         note
 
