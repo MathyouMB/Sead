@@ -14,7 +14,7 @@ module Types
       User.find(id)
     end
 
-    field :login, Types::UserType, null: false do
+    field :login, Types::UserType, null: true do
       argument :email, String, required: true
       argument :password, String, required: true
     end
@@ -27,9 +27,11 @@ module Types
       elsif (user.password != password)
           return nil 
           #raise GraphQL::ExecutionError, "Incorrect password"
+      else
+        return(user)
       end
 
-      return(user)
+     
 
     end
 
