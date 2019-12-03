@@ -20,7 +20,17 @@ module Types
     end
 
     def login(email:, password:)
-      User.find_by(email: email)
+      user = User.find_by(email: email)
+      if user.nil?
+          raise GraphQL::ExecutionError, "User does not exist"
+      end
+
+      if (user.password != password)
+         raise GraphQL::ExecutionError, "Incorrect password"
+      end
+
+      user
+      
     end
 
     field :notes, [Types::NoteType], null: false
