@@ -13,5 +13,5 @@ https://mathyoumb.github.io/Sead/
 ## Previous Project:
 https://github.com/MathyouMB/Sead-Beta
 
-## API:
-https://github.com/MathyouMB/Sead-API
+## CLIENT:
+https://github.com/MathyouMB/Sead
