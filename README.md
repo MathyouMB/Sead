@@ -14,4 +14,4 @@ https://mathyoumb.github.io/Sead/
 https://github.com/MathyouMB/Sead-Beta
 
 ## CLIENT:
-https://github.com/MathyouMB/Sead
+https://github.com/MathyouMB/Sead-CLient
